@@ -1,10 +1,6 @@
 {
   "development": {
-<<<<<<< HEAD
     "username": "davidedouard",
-=======
-    "username": "kamilahamir-al-sharif",
->>>>>>> master
     "password": null,
     "database": "expensetracker",
     "host": "127.0.0.1",
