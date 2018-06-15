@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <container>
+      <h2><em>Expense Trackers</em></h2>
+      <br />
+      <ol>
+      {{#each users}}
+        <li>
+           <div>
+                <em>First Name: </em>{{firstname}}<br />
+                <em>Last Name: </em>{{lastname}}<br />
+                <hr>
+            </div>
+        </li>
+      {{/each}}
+      </ol>
+    </container>
+  </body>
+</html>

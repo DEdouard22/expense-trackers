@@ -8,6 +8,7 @@ var dotenv = require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var userRouter = require('./routes/user');
 const setupAuth = require('./auth');
 var transactionsRouter = require('./routes/transactions');
 var newtransactionRouter = require('./routes/newtransaction');
@@ -28,6 +29,7 @@ setupAuth(app);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/user', userRouter);
 app.use('/transactions', transactionsRouter);
 app.use('/transactions/newtransaction', newtransactionRouter);
 
