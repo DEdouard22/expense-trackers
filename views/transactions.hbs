@@ -15,29 +15,16 @@
             <th>Type</th>
         </tr>
     {{#each transactions}}
-        {{#if isCredit}}
-            <tr class="credit">
-                {{!-- <td><a href="/transactions/edit/{{id}}">Edit</a></td> --}}
-                <td><a href="/transactions/delete/{{id}}">Delete</a></td>
-                <td>{{description}}</td>
-                <td>{{amount}}</td>
-                <td>{{frequency}}</td>
-                <td>{{Paymentmethod.description}}</td>
-                <td>{{category}}</td>
-                <td>{{type}}</td>
-            </tr>
-        {{else}}
-            <tr class="debit">
-                {{!-- <td><a href="/transactions/edit/{{id}}">Edit</a></td> --}}
-                <td><a href="/transactions/delete/{{id}}">Delete</a></td>
-                <td>{{description}}</td>
-                <td>{{amount}}</td>
-                <td>{{frequency}}</td>
-                <td>{{Paymentmethod.description}}</td>
-                <td>{{category}}</td>
-                <td>{{type}}</td>
-            </tr>
-        {{/if}}
+        <tr class= {{type}}>
+            {{!-- <td><a href="/transactions/edit/{{id}}">Edit</a></td> --}}
+            <td><a href="/transactions/delete/{{id}}">Delete</a></td>
+            <td>{{description}}</td>
+            <td>{{amount}}</td>
+            <td>{{frequency}}</td>
+            <td>{{Paymentmethod.description}}</td>
+            <td>{{category}}</td>
+            <td>{{type}}</td>
+        </tr>
     {{/each}}
     </table>
 
