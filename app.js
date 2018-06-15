@@ -10,6 +10,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var userRouter = require('./routes/user');
 const setupAuth = require('./auth');
+var transactionsRouter = require('./routes/transactions');
+var newtransactionRouter = require('./routes/newtransaction');
 
 var app = express();
 
@@ -27,7 +29,12 @@ setupAuth(app);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+<<<<<<< HEAD
 app.use('/user', userRouter);
+=======
+app.use('/transactions', transactionsRouter);
+app.use('/transactions/newtransaction', newtransactionRouter);
+>>>>>>> master
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,7 +51,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-app.listen(3000, 'localhost');
 
 module.exports = app;
