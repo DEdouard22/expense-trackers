@@ -19,7 +19,7 @@ const setupAuth = (app) => {
   passport.use(new GitHubStrategy({ // #3 sets up passport strategy
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: 'http://localhost:3000/github/auth'
+    callbackURL: `${process.env.APP_URL}/github/auth`
   }, (accessToken, refreshToken, profile, done) => {
     models.User.findOrCreate({
       where: {
@@ -33,7 +33,7 @@ const setupAuth = (app) => {
   passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: 'http://localhost:3000/auth/facebook/callback'
+    callbackURL: `/a${process.env.APP_URL}uth/facebook/callback`
   },
   function(accessToken, refreshToken, profile, done) {
     models.User.findOrCreate({
