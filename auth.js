@@ -33,7 +33,7 @@ const setupAuth = (app) => {
   passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: `/a${process.env.APP_URL}uth/facebook/callback`
+    callbackURL: `${process.env.APP_URL}/auth/facebook/callback`
   },
   function(accessToken, refreshToken, profile, done) {
     models.User.findOrCreate({
