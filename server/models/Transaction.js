@@ -4,6 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     amount: DataTypes.INTEGER,
     frequency:DataTypes.STRING,
+    category:DataTypes.STRING,
+    type:DataTypes.STRING,
   }, {});
   Transaction.associate = function(models) {
     Transaction.belongsTo(models.User);

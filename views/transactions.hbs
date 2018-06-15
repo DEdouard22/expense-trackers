@@ -1,0 +1,33 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<div>
+    <a href="/transactions/newtransaction">Add a Transaction</a>
+    <br/>
+    <table border="1">
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Frequency</th>
+            <th>Payment Method</th>
+            <th>Category</th>
+            <th>Type</th>
+        </tr>
+    {{#each transactions}}
+        <tr>
+            <td><a href="/transactions/newtransaction">Edit</a></td>
+            <td><a href="/transactions/delete/{{id}}">Delete</a></td>
+            <td>{{description}}</td>
+            <td>{{amount}}</td>
+            <td>{{frequency}}</td>
+            <td>{{Paymentmethod.description}}</td>
+            <td>{{category}}</td>
+            <td>{{type}}</td>
+        </tr>
+    {{/each}}
+    </table>
+
+</div>
+
