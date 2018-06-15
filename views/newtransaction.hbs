@@ -1,0 +1,42 @@
+{{#each transactions}}
+<div class="transactions">
+    <div class="new_transaction">
+        {{snippet}}
+    </div>
+</div>
+{{/each}}
+
+{{!-- {{#if isLoggedIn}} --}}
+    <form action="/transactions/newtransaction" method="POST">
+        <div>
+            <label for="description">Transaction Description</label>
+            <input type="text" name="description">
+        </div>
+        <div>
+            <label for="amount">Transaction Amount</label>
+            <input type="text" name="amount">
+        </div>
+        <div>
+            <label for="frequency">Transaction Frequency</label>
+            <input type="text" name="frequency">
+        </div>
+        <div>
+            <label for="paymentMethod">Transaction Payment Method</label>
+            {{!-- <input type="text" name="paymentMethod"> --}}
+            <select name="paymentMethod">
+                {{#each methods}}
+                    <option value="{{id}}">{{description}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div>
+            <label for="category">Transaction Category</label>
+            <input type="text" name="category">
+        </div>
+        <div>
+            <label for="type">Transaction Type</label>
+            <input type="text" name="type">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+{{!-- {{/if}} --}}
