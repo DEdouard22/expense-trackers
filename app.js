@@ -29,12 +29,9 @@ setupAuth(app);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-<<<<<<< HEAD
 app.use('/user', userRouter);
-=======
 app.use('/transactions', transactionsRouter);
 app.use('/transactions/newtransaction', newtransactionRouter);
->>>>>>> master
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
