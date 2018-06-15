@@ -1,8 +1,33 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-family: 'Raleway', sans-serif;
+	color: white;
 }
 
-a {
-  color: #00B7FF;
+.navbar {
+  display: flex;
+	justify-content: center;
+}
+
+.navbar-header {
+	display: flex;
+	justify-content: center;
+}
+
+.nav-item {
+	display: inline;
+  margin: 20px;
+}
+
+.bg {
+	background-image: url('money.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 1300px;
+	height: 600px;
+	padding-top: 2cm;
+	padding-left: 2cm;
+} 
+
+.background {
+	text-align: left;
 }
