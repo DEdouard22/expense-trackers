@@ -26,8 +26,22 @@ body {
 	height: 600px;
 	padding-top: 2cm;
 	padding-left: 2cm;
-} 
+}
 
 .background {
 	text-align: left;
 }
+
+.transactions {
+	color: black;
+}
+
+.debit {
+	background-color: red;
+}
+
+.credit {
+	background-color: green;
+}
+
+
