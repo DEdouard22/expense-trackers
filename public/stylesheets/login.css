@@ -8,6 +8,11 @@ h1 {
 	margin: 50px 0 50px 0;
 }
 
+.nav-item {
+	display: inline;
+	margin: 20px;
+}
+
 .container {
 	display: flex;
 	justify-content: center;

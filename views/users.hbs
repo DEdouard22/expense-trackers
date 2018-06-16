@@ -1,18 +1,28 @@
-<!DOCTYPE html>
-<html>
   <head>
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+		<title>Users</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="stylesheets/login.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	</head>
+
+    <!-- Navbar -->	
+    <nav class="navbar sticky-top navbar-light bg-light">
+        <img src="images/gross2.png" alt="logo" width="90" height="110" href="localhost:3000">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a href="/"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Home</button></a>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Transactions</button>
+            </li>
+        </ul>
+    </nav>
     <container>
-      <h2><em>Expense Trackers</em></h2>
       <br />
       <ol>
       {{#each users}}
         <li>
-           <div>
+          <div>
                 <em>First Name: </em>{{firstname}}<br />
                 <em>Last Name: </em>{{lastname}}<br />
                 <hr>
@@ -21,6 +31,4 @@
       {{/each}}
       </ol>
     </container>
-  </body>
-</html>
 
