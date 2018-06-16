@@ -6,9 +6,6 @@ const models = require('../server/models');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
     models.Paymentmethod.findAll()
-
-
-
         .then(methods => {
             res.render('newtransaction', {
                 title: 'Add a Transaction',
@@ -64,14 +61,7 @@ router.post('/', (req, res) => {
         // UserId: req.user,
         UserId: 1,
     })
-    models.Transaction.findOne({
-        type: 'debit'
-    })
-    .then(transactions => {
-        models.Transaction.updateAttributes({
-            amount: (req.body.amount) * (-1)
-        });
-    })
+
     .then(transactions => {
         // res.status(201).send(transactions);
         res.redirect('/transactions');
