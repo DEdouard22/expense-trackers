@@ -102,7 +102,7 @@ function(email, password, done) {
   app.post('/login', 
     passport.authenticate('local', { failureRedirect: '/login' }),
     function(req, res) {
-      res.redirect('/');
+      res.redirect('/'); // should be what Cristian is working on. His page. 
     });
 };
 const ensureAuthenticated = (req, res, next) => {
