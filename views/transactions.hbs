@@ -51,6 +51,18 @@
             <th>Type</th>
         </tr>
     {{#each transactions}}
+<<<<<<< HEAD
+        <tr class= {{type}}>
+            {{!-- <td><a href="/transactions/edit/{{id}}">Edit</a></td> --}}
+            <td><a href="/transactions/delete/{{id}}">Delete</a></td>
+            <td>{{description}}</td>
+            <td>{{amount}}</td>
+            <td>{{frequency}}</td>
+            <td>{{Paymentmethod.description}}</td>
+            <td>{{category}}</td>
+            <td>{{type}}</td>
+        </tr>
+=======
         {{#if isCredit}}
             <tr class="credit">
                 {{!-- <td><a href="/transactions/edit/{{id}}">Edit</a></td> --}}
@@ -77,6 +89,7 @@
         </table>
     </div>
         {{/if}}
+>>>>>>> master
     {{/each}}
     </table>
 
