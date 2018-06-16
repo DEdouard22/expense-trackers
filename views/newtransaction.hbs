@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
-<!-- Navbar -->	
+<!-- Navbar -->
     <nav class="navbar sticky-top navbar-light bg-light">
         <img src="/images/gross2.png" alt="logo" width="90" height="110">
         <ul class="nav justify-content-end">
@@ -26,7 +26,7 @@
 </div>
 {{/each}}
 
-{{!-- {{#if isLoggedIn}}  --}}
+{{#if isLoggedIn}}
     <form action="/transactions/newtransaction" method="POST">
         <div>
             <label for="description">Transaction Description</label>
@@ -38,7 +38,10 @@
         </div>
         <div>
             <label for="frequency">Transaction Frequency</label>
-            <input type="text" name="frequency">
+            <select type="text" name="frequency">
+                <option>Monthly</option>
+                <option>Weekly</option>
+            </select>
         </div>
         <div>
             <label for="paymentMethod">Transaction Payment Method</label>
@@ -62,6 +65,4 @@
         </div>
         <button class="transactions" type="submit">Submit</button>
     </form>
-
-
-
+{{/if}}

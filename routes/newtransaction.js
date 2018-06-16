@@ -58,8 +58,8 @@ router.post('/', (req, res) => {
         PaymentmethodId: req.body.paymentMethod,
         category: req.body.category,
         type: req.body.type,
-        // UserId: req.user,
-        UserId: 1,
+        UserId: req.user,
+        // UserId: 1,
     })
 
     .then(transactions => {

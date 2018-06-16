@@ -19,6 +19,18 @@ router.get('/:id', function(req, res, next) {
     });
 });
 
+//Posting payment methods to user page
+router.post('/', (req, res) => {
+  models.Paymentmethods.create({
+    PaymentmethodId: req.body.paymentMethod,
+    UserId: req.user,
+})
+
+.then(transactions => {
+    // res.status(201).send(transactions);
+    res.redirect('/user');
+})
+
 // Testing redirect from succesfull login
 router.post('/', function (req, res) {
   //Checks for Login Method
