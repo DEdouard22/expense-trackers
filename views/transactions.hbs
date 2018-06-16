@@ -1,3 +1,39 @@
+<head>
+    <title>Transactions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="stylesheets/login.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<!-- Navbar -->	
+    <nav class="navbar sticky-top navbar-light bg-light">
+        <img src="images/gross2.png" alt="logo" width="90" height="110" href="localhost:3000">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a href="/"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Home</button></a>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Contact Us</button>
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <a href="/transactions/newtransaction"><button class="btn btn-success" type="submit">Add a Transaction</button></a>
+        <br/>
+        <table border="1">
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Frequency</th>
+                <th>Payment Method</th>
+                <th>Category</th>
+                <th>Type</th>
+            </tr>
+        {{#each transactions}}
+            <tr>
+                <td><a href="/transactions/newtransaction">Edit</a></td>
 <h1 class="transactions">{{title}}</h1>
 <p class="transactions">Welcome to {{title}}</p>
 
@@ -15,6 +51,7 @@
             <th>Type</th>
         </tr>
     {{#each transactions}}
+<<<<<<< HEAD
         <tr class= {{type}}>
             {{!-- <td><a href="/transactions/edit/{{id}}">Edit</a></td> --}}
             <td><a href="/transactions/delete/{{id}}">Delete</a></td>
@@ -25,8 +62,35 @@
             <td>{{category}}</td>
             <td>{{type}}</td>
         </tr>
+=======
+        {{#if isCredit}}
+            <tr class="credit">
+                {{!-- <td><a href="/transactions/edit/{{id}}">Edit</a></td> --}}
+                <td><a href="/transactions/delete/{{id}}">Delete</a></td>
+                <td>{{description}}</td>
+                <td>{{amount}}</td>
+                <td>{{frequency}}</td>
+                <td>{{Paymentmethod.description}}</td>
+                <td>{{category}}</td>
+                <td>{{type}}</td>
+            </tr>
+        {{else}}
+            <tr class="debit">
+                {{!-- <td><a href="/transactions/edit/{{id}}">Edit</a></td> --}}
+                <td><a href="/transactions/delete/{{id}}">Delete</a></td>
+                <td>{{description}}</td>
+                <td>{{amount}}</td>
+                <td>{{frequency}}</td>
+                <td>{{Paymentmethod.description}}</td>
+                <td>{{category}}</td>
+                <td>{{type}}</td>
+            </tr>
+        {{/each}}
+        </table>
+    </div>
+        {{/if}}
+>>>>>>> master
     {{/each}}
     </table>
 
-</div>
 
